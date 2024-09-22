@@ -118,7 +118,7 @@ export function reformPayloadFormat(payload: string[][]): string[][][]{
 
 				const tradeBody = JSON.stringify(payload[1][2][1]);
 
-				test4 = JSON.stringify([["Message", JSON.stringify([valDate, valType, ['Trades', tradeBody]])]]);
+				test4 = JSON.stringify(["Message", JSON.stringify([valDate, valType, ['Trades', tradeBody]])]);
 			}
 		});
 		const finalOutput =  `"[["[`+ test0 + "," + test1 + "," + test2 + "," + test3 + "," + test4 + `"]]"`;
