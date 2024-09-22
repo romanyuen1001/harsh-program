@@ -20,5 +20,4 @@ export function splitArrayExact<T>(array: T[], n: number): T[][] {
 // const largeArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // const n = 3; // Number of chunks
 // const splitArrays = splitArrayExact(largeArray, n);
-
 // console.log(splitArrays);
