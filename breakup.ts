@@ -81,7 +81,6 @@ function parseData(data: string): Data {
 export function reformPayloadFormat(payload: string[][]): string[][][]{
 	const data = payload[0][0];
 	const outputObject = parseData(data);
-
 	const outputOneDataObject: OneData[] = outputObject.message.map((m) => {
 		return {
 			request: outputObject.request,
@@ -95,7 +94,6 @@ export function reformPayloadFormat(payload: string[][]): string[][][]{
 	const payloadOriginalArrays = outputOneDataObject.map((obj) => {
 		return Object.values(obj);
 	});
-
 
 	const payloadEscapedArrays = payloadOriginalArrays.map((payloadArr) => {
 		let test0: string, test1: string, test2: string, test3: string, test4;
@@ -115,9 +113,7 @@ export function reformPayloadFormat(payload: string[][]): string[][][]{
 			if (jndex === 4){ // Message
 				const valDate = payload[1][0];
 				const valType = payload[1][1];
-
 				const tradeBody = JSON.stringify(payload[1][2][1]);
-
 				test4 = JSON.stringify(["Message", JSON.stringify([valDate, valType, ['Trades', tradeBody]])]);
 			}
 		});
