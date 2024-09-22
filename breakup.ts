@@ -113,7 +113,7 @@ export function reformPayloadFormat(payload: string[][]): string[][][]{
 			if (jndex === 4){ // Message
 				const valDate = payload[1][0];
 				const valType = payload[1][1];
-				const tradeBody = JSON.stringify(payload[1][2][1]);
+				const tradeBody = JSON.stringify(payload[1][2]);
 				test4 = JSON.stringify(["Message", JSON.stringify([valDate, valType, ['Trades', tradeBody]])]);
 			}
 		});
