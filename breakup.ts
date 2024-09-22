@@ -26,14 +26,14 @@ interface Data {
 function parseMessage(message: any) {
 	const messagesStr = message;
 	const messageJson = JSON.parse(messagesStr[1]);
-	const tradesUnsantized = JSON.parse(messageJson[2][1]);
+	const tradesUnsanitized = JSON.parse(messageJson[2][1]);
 	// ValDate and ValuationType
 	const trimmedHeadersArr = [messageJson[0], messageJson[1]];
 
 	let trades = [];
 	let temp = [];
-	for (let i = 0; i < tradesUnsantized.length; i++) {
-		const item = tradesUnsantized[i];
+	for (let i = 0; i < tradesUnsanitized.length; i++) {
+		const item = tradesUnsanitized[i];
 		if (i % 2 === 0) {
 			// Columns in Trades
 			temp.push(item);
