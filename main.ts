@@ -53,7 +53,7 @@ app.post("/", async (req, res) => {
 
 	} catch (error) {
 		console.error("Error in parallel API calls", error);
-		return res.status(500).json({ error: "Internal Server Error" });
+		return res.status(500).json({ error: "Error in parallel API calls - Internal Server Error" });
 	}
 
 	console.log("===============================\nresult: ", result);
