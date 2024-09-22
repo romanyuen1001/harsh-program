@@ -1,4 +1,4 @@
-// import
+import axios from "axios";
 
 export async function parallelCallApi<T, P>(arr: T[], fn: () => P, MAX_CONCURRENCY = 10){
 	const executing: Promise<P>[] = [];
